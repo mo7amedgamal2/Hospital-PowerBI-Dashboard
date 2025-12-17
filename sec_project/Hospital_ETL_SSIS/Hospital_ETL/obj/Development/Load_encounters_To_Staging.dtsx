@@ -1,0 +1,1285 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/16/2025 2:40:48 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-B09LE46"
+  DTS:CreatorName="DESKTOP-B09LE46\Mohamed Gamal"
+  DTS:DTSID="{46209CBE-6ADB-4D9B-BE2F-94338DE5A47A}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5467.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{B80D3A32-2849-4B78-BC18-F934EF5BB6D2}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-B09LE46\SQLEXPRESS.Hospital_DW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{79DC4221-6122-4CF8-AF65-81D42CB8751A}"
+      DTS:ObjectName="DESKTOP-B09LE46\SQLEXPRESS.Hospital_DW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-B09LE46\SQLEXPRESS;Initial Catalog=Hospital_DW;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{79DC4221-6122-4CF8-AF65-81D42CB8751A}DESKTOP-B09LE46\SQLEXPRESS.Hospital_DW;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{CB8CE5B3-6ADE-4262-9C01-E599E48AFE44}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="D:\BI\sec_project\Hospital+Patient+Records\patients.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Id"
+              DTS:DTSID="{C6BDA5C8-FE20-492B-BECC-92A7820ABD89}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BIRTHDATE"
+              DTS:DTSID="{F0486591-44B6-40B8-A59F-894E707D0569}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DEATHDATE"
+              DTS:DTSID="{D5C126F0-41B6-4A2B-85F4-D25F64A131C3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PREFIX"
+              DTS:DTSID="{32D08427-06AC-450B-926F-565FAF739411}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FIRST"
+              DTS:DTSID="{486C8480-E908-4F69-92C1-C97BD214A7B1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LAST"
+              DTS:DTSID="{AADC0157-1A9C-4C66-8CB3-18387219804E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SUFFIX"
+              DTS:DTSID="{23FE97DB-2D27-4BEE-94A9-1DE6B6776F08}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MAIDEN"
+              DTS:DTSID="{A6F0DBE4-C528-4462-8EC4-98DFDF3DF8DD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MARITAL"
+              DTS:DTSID="{93423082-908A-46CF-AF49-935C5B60956F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="RACE"
+              DTS:DTSID="{CE0A5E5F-1205-4176-AC57-DD10B32F1B50}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ETHNICITY"
+              DTS:DTSID="{A871E329-1786-4EF0-B4AD-EC1227A0E786}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GENDER"
+              DTS:DTSID="{5C6D70E8-1579-4ACD-BE2A-1D998BE53ABA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BIRTHPLACE"
+              DTS:DTSID="{88C96A96-CD83-4A14-B534-896AEFEE671B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ADDRESS"
+              DTS:DTSID="{A8D36308-CAA5-4712-84F0-C5FF6A2C5743}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CITY"
+              DTS:DTSID="{879F58C1-120D-4051-A438-A97591A60564}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="STATE"
+              DTS:DTSID="{3B687215-5A0D-4CA8-86E5-506058CD9BC4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="COUNTY"
+              DTS:DTSID="{BA9421A1-A579-47B6-A7DA-6F46CC0B0FC5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ZIP"
+              DTS:DTSID="{D38BC0C1-F311-43FC-B0C0-B54D84E2ACB7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LAT"
+              DTS:DTSID="{39846E7E-2A82-40ED-B100-DBEA36E11B50}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LON"
+              DTS:DTSID="{CB26B41F-23AC-4B17-8778-AB0157D397B4}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 4]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{D950FA83-8DF5-4FC9-9CBB-F79B48988367}"
+      DTS:ObjectName="Flat File Connection Manager 4">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="D:\BI\sec_project\Hospital+Patient+Records\encounters.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Id"
+              DTS:DTSID="{79CA9FFD-0720-47BE-9726-9A0C2DC15742}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="START"
+              DTS:DTSID="{93C41E4D-C098-430A-9BAD-43CFC48DD194}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="STOP"
+              DTS:DTSID="{CC5E2BBD-E807-494A-8AA6-F6DECFD06E09}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PATIENT"
+              DTS:DTSID="{1221A46F-4845-4605-B707-57312ACFDFBF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ORGANIZATION"
+              DTS:DTSID="{AC126485-769F-4DCD-AAAB-F199E3629B71}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PAYER"
+              DTS:DTSID="{0A3A66F7-ECCE-4789-A9A2-578158F25E49}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ENCOUNTERCLASS"
+              DTS:DTSID="{6AE7C005-7F8F-4A5D-B68F-6D4FB35605CC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CODE"
+              DTS:DTSID="{A5145164-F4A5-43C8-ABA9-4CF54776F6C7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DESCRIPTION"
+              DTS:DTSID="{4C740038-CDAF-47B6-BC8A-9D6451A4AB16}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BASE_ENCOUNTER_COST"
+              DTS:DTSID="{EA98D4F7-CCB2-46F5-A577-2B7FA11DDD5B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TOTAL_CLAIM_COST"
+              DTS:DTSID="{F74D75C2-DA11-4FDB-A759-F881E7C54A42}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PAYER_COVERAGE"
+              DTS:DTSID="{4E05D14B-3FAE-4827-B316-82E99B9CC9AF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="REASONCODE"
+              DTS:DTSID="{68DD7CFC-FA4F-43BE-89C9-474794786A66}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="REASONDESCRIPTION"
+              DTS:DTSID="{C4E1A0E9-7174-489C-B853-5EFB11583ADE}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT_Load_Patients_CSV"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{1C3AF4E8-2B31-487B-9DF4-6DE6EC982660}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT_Load_Patients_CSV"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT_Load_Patients_CSV\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_Load_Patients_CSV\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Load_Patients_CSV\Data Conversion.Inputs[Data Conversion Input].Columns[Id]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Id"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Id]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_Patients_CSV\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\DFT_Load_Patients_CSV\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Patients_CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT_Load_Patients_CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Id]"
+                      name="Copy of Id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Load_Patients_CSV\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\DFT_Load_Patients_CSV\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Patients_CSV\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Patients_CSV\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Load_Patients_CSV\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Patients_CSV\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Load_Patients_CSV\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_Load_Patients_CSV\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 4]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 4]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Id]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Id]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Id]"
+                      name="Id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[START]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[START]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[START]"
+                      name="START"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[STOP]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[STOP]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[STOP]"
+                      name="STOP"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[PATIENT]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PATIENT]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[PATIENT]"
+                      name="PATIENT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ORGANIZATION]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ORGANIZATION]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ORGANIZATION]"
+                      name="ORGANIZATION"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[PAYER]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PAYER]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[PAYER]"
+                      name="PAYER"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ENCOUNTERCLASS]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ENCOUNTERCLASS]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ENCOUNTERCLASS]"
+                      name="ENCOUNTERCLASS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[CODE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CODE]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[CODE]"
+                      name="CODE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[DESCRIPTION]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DESCRIPTION]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[DESCRIPTION]"
+                      name="DESCRIPTION"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[BASE_ENCOUNTER_COST]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[BASE_ENCOUNTER_COST]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[BASE_ENCOUNTER_COST]"
+                      name="BASE_ENCOUNTER_COST"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[TOTAL_CLAIM_COST]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TOTAL_CLAIM_COST]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[TOTAL_CLAIM_COST]"
+                      name="TOTAL_CLAIM_COST"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[PAYER_COVERAGE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PAYER_COVERAGE]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[PAYER_COVERAGE]"
+                      name="PAYER_COVERAGE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[REASONCODE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[REASONCODE]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[REASONCODE]"
+                      name="REASONCODE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[REASONDESCRIPTION]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[REASONDESCRIPTION]"
+                      length="50"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[REASONDESCRIPTION]"
+                      name="REASONDESCRIPTION"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Id]"
+                      dataType="wstr"
+                      length="50"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[START]"
+                      dataType="wstr"
+                      length="50"
+                      name="START" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[STOP]"
+                      dataType="wstr"
+                      length="50"
+                      name="STOP" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PATIENT]"
+                      dataType="wstr"
+                      length="50"
+                      name="PATIENT" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ORGANIZATION]"
+                      dataType="wstr"
+                      length="50"
+                      name="ORGANIZATION" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PAYER]"
+                      dataType="wstr"
+                      length="50"
+                      name="PAYER" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ENCOUNTERCLASS]"
+                      dataType="wstr"
+                      length="50"
+                      name="ENCOUNTERCLASS" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CODE]"
+                      dataType="wstr"
+                      length="50"
+                      name="CODE" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DESCRIPTION]"
+                      dataType="wstr"
+                      length="50"
+                      name="DESCRIPTION" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[BASE_ENCOUNTER_COST]"
+                      dataType="wstr"
+                      length="50"
+                      name="BASE_ENCOUNTER_COST" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TOTAL_CLAIM_COST]"
+                      dataType="wstr"
+                      length="50"
+                      name="TOTAL_CLAIM_COST" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PAYER_COVERAGE]"
+                      dataType="wstr"
+                      length="50"
+                      name="PAYER_COVERAGE" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[REASONCODE]"
+                      dataType="wstr"
+                      length="50"
+                      name="REASONCODE" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[REASONDESCRIPTION]"
+                      dataType="wstr"
+                      length="50"
+                      name="REASONDESCRIPTION" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Load_Patients_CSV\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[stg].[encounters_row]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-B09LE46\SQLEXPRESS.Hospital_DW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-B09LE46\SQLEXPRESS.Hospital_DW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[START]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="START"
+                      externalMetadataColumnId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[START]"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[START]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[STOP]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="STOP"
+                      externalMetadataColumnId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STOP]"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[STOP]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PATIENT]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="PATIENT"
+                      externalMetadataColumnId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PATIENT]"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[PATIENT]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ORGANIZATION]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ORGANIZATION"
+                      externalMetadataColumnId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ORGANIZATION]"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ORGANIZATION]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PAYER]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="PAYER"
+                      externalMetadataColumnId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PAYER]"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[PAYER]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ENCOUNTERCLASS]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ENCOUNTERCLASS"
+                      externalMetadataColumnId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ENCOUNTERCLASS]"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ENCOUNTERCLASS]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CODE]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CODE"
+                      externalMetadataColumnId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CODE]"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[CODE]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DESCRIPTION]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DESCRIPTION"
+                      externalMetadataColumnId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DESCRIPTION]"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[DESCRIPTION]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TOTAL_CLAIM_COST]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="TOTAL_CLAIM_COST"
+                      externalMetadataColumnId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TOTAL_CLAIM_COST]"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[TOTAL_CLAIM_COST]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PAYER_COVERAGE]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="PAYER_COVERAGE"
+                      externalMetadataColumnId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PAYER_COVERAGE]"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[PAYER_COVERAGE]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BASE_ENCOUNTER_COST]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="BASE_ENCOUNTER_COST"
+                      externalMetadataColumnId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BASE_ENCOUNTER_COST]"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[BASE_ENCOUNTER_COST]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[REASONCODE]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="REASONCODE"
+                      externalMetadataColumnId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[REASONCODE]"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[REASONCODE]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[REASONDESCRIPTION]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="REASONDESCRIPTION"
+                      externalMetadataColumnId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[REASONDESCRIPTION]"
+                      lineageId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output].Columns[REASONDESCRIPTION]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Id]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of Id"
+                      externalMetadataColumnId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
+                      lineageId="Package\DFT_Load_Patients_CSV\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Id]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
+                      dataType="nText"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[START]"
+                      dataType="nText"
+                      name="START" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STOP]"
+                      dataType="nText"
+                      name="STOP" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PATIENT]"
+                      dataType="nText"
+                      name="PATIENT" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ORGANIZATION]"
+                      dataType="nText"
+                      name="ORGANIZATION" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PAYER]"
+                      dataType="nText"
+                      name="PAYER" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ENCOUNTERCLASS]"
+                      dataType="nText"
+                      name="ENCOUNTERCLASS" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CODE]"
+                      dataType="nText"
+                      name="CODE" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DESCRIPTION]"
+                      dataType="nText"
+                      name="DESCRIPTION" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BASE_ENCOUNTER_COST]"
+                      dataType="nText"
+                      name="BASE_ENCOUNTER_COST" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TOTAL_CLAIM_COST]"
+                      dataType="nText"
+                      name="TOTAL_CLAIM_COST" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PAYER_COVERAGE]"
+                      dataType="nText"
+                      name="PAYER_COVERAGE" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[REASONCODE]"
+                      dataType="nText"
+                      name="REASONCODE" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[REASONDESCRIPTION]"
+                      dataType="nText"
+                      name="REASONDESCRIPTION" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT_Load_Patients_CSV.Paths[Data Conversion Output]"
+              endId="Package\DFT_Load_Patients_CSV\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\DFT_Load_Patients_CSV\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\DFT_Load_Patients_CSV.Paths[Flat File Source Output]"
+              endId="Package\DFT_Load_Patients_CSV\Data Conversion.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\DFT_Load_Patients_CSV\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="197.6,41.6"
+          Id="Package\DFT_Load_Patients_CSV"
+          TopLeft="284.999988675118,92.7333340703117" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT_Load_Patients_CSV">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\DFT_Load_Patients_CSV\OLE DB Destination"
+          TopLeft="391.666651103232,324.133335909314" />
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\DFT_Load_Patients_CSV\Flat File Source"
+          TopLeft="405.833317206966,107.466667520735" />
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\DFT_Load_Patients_CSV\Data Conversion"
+          TopLeft="394.999984304111,220.200001343091" />
+        <EdgeLayout
+          Id="Package\DFT_Load_Patients_CSV.Paths[Flat File Source Output]"
+          TopLeft="481.433317206966,149.066667520735">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8.43333290285494,71.133333822356"
+              Start="0,0"
+              End="-8.43333290285494,63.633333822356">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.566666911178" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.566666911178"
+                    Point2="0,35.566666911178"
+                    Point3="-4,35.566666911178" />
+                  <mssgle:LineSegment
+                    End="-4.43333290285494,35.566666911178" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.43333290285494,35.566666911178"
+                    Point2="-8.43333290285494,35.566666911178"
+                    Point3="-8.43333290285494,39.566666911178" />
+                  <mssgle:LineSegment
+                    End="-8.43333290285494,63.633333822356" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_Patients_CSV.Paths[Data Conversion Output]"
+          TopLeft="475.133317703671,261.800001343091">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,62.3333345662223"
+              Start="0,0"
+              End="0,54.8333345662223">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.8333345662223" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Load_Patients_CSV\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
