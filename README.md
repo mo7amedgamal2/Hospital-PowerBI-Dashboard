@@ -104,14 +104,6 @@ Developed interactive dashboards to analyze:
 
 ---
 
-## 📷 Dashboard Preview
-
-### Healthcare Dashboard
-
-![Dashboard](images/dashboard.png)
-
----
-
 ## 🚀 Skills Demonstrated
 
 - Data Warehousing
